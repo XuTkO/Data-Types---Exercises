@@ -1,21 +1,29 @@
-import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int a = Integer.parseInt(scanner.nextLine());
-        int b = Integer.parseInt(scanner.nextLine());;
-
-        int c = a;
-        a=b;
-        b=c;
-
-        System.out.println(a);
-        System.out.println(b);
+        int n = Integer.parseInt(scanner.nextLine());
 
 
 
+        byte var =0;
+        int timesOverflow = 0;
+
+        for (int i=0; i < n; i++){
+            var++;
+            if (var ==0){
+                timesOverflow++;
+            }
+        }
+        if (var<0) {
+            System.out.println(var + 256);
+        } else {
+            System.out.println(var);
+        }
+        if (timesOverflow>0) {
+            System.out.printf("Overflowed %s times", timesOverflow);
+        }
     }
 }
