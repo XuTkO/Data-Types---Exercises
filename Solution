@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        byte num1=-100;
+        int num2=128;
+        int num3= -3540;
+        int num4= 64876;
+        long num5 = 2147483648l;
+        int num6 = -1141583228;
+        long num7 = -1223372036854775808l;
+
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(num3);
+        System.out.println(num4);
+        System.out.println(num5);
+        System.out.println(num6);
+        System.out.println(num7);
+
+
+
+    }
+}
