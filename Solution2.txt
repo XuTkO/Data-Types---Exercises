@@ -8,8 +8,8 @@ public class Main {
 
 
 
-        int var = n%256;
-        System.out.println(var);
+       
+        System.out.println(n%256);
         int timesOverflow = n/256;
         if (timesOverflow>0){
             System.out.println("Overflowed " + timesOverflow + " times");
