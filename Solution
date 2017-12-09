@@ -5,20 +5,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int firstOperand = Integer.parseInt(scanner.nextLine());
-        String operator = scanner.nextLine();
-        int secondOperand = Integer.parseInt(scanner.nextLine());
+        String delimiter = scanner.nextLine();
+        int N = Integer.parseInt(scanner.nextLine());
+        String allStrings = "";
 
-        if (operator.equals("*")){
-            System.out.println(firstOperand + " * " + secondOperand + " = " + firstOperand*secondOperand);
-        } else if (operator.equals("/")){
-            System.out.println(firstOperand + " / " + secondOperand + " = " + firstOperand/secondOperand);
-        }else if (operator.equals("-")){
-            System.out.println(firstOperand + " - " + secondOperand + " = " + (firstOperand-secondOperand));
-        }else if (operator.equals("+")){
-            System.out.println(firstOperand + " + " + secondOperand + " = " + (firstOperand+secondOperand));
+        for (int i = 1; i<=N; i++){
+            String word = scanner.nextLine();
+            if(i<=N-1) {
+                allStrings += word + delimiter;
+            } else {
+                allStrings += word;
+            }
+
         }
 
-
+        System.out.println(allStrings);
     }
 }
