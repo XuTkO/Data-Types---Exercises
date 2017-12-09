@@ -1,28 +1,19 @@
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int a = Integer.parseInt(scanner.nextLine());
-        int b = Integer.parseInt(scanner.nextLine());
-        int c = Integer.parseInt(scanner.nextLine());
+        int N = Integer.parseInt(scanner.nextLine());
+        String word = "";
 
-        if (a + b > c && b + c > a && c + a > b) {
-            System.out.println("Triangle is valid.");
-            if (a * a + b * b == c * c) {
-                System.out.println("Triangle has a right angle between sides a and b");
-            } else if (a * a + c * c == b * b) {
-                System.out.println("Triangle has a right angle between sides a and c");
-            } else if (b * b + c * c == a * a) {
-                System.out.println("Triangle has a right angle between sides b and c");
-            } else {
-                System.out.println("Triangle has no right angles");
-            }
-        } else {
-            System.out.println("Invalid Triangle.");
+
+        for (int i = 1; i<=N; i++){
+            int asciiCode = Integer.parseInt(scanner.nextLine());
+            char charecter = (char)asciiCode;
+            word+=charecter;
         }
-
-
+        System.out.println(word);
     }
 }
